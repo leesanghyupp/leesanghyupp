@@ -1,12 +1,10 @@
 <div align="center">
 
 <!-- 상단 애니메이션 배너 -->
-<img src="https://capsule-render.vercel.app/api?type=waving&color=2d6a4f&height=200&section=header&text=Hi%2C%20I'm%20Hyup%20👋&fontSize=48&fontColor=ffffff&fontAlignY=38&desc=Backend%20Developer&descSize=20&descAlignY=58&descColor=d8f3dc" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=2d6a4f&height=200&section=header&text=Hi%2C%20I'm%20Hyup%20%F0%9F%91%8B&fontSize=48&fontColor=ffffff&fontAlignY=38&desc=Backend%20Developer&descSize=20&descAlignY=58&descColor=d8f3dc" width="100%"/>
 
 <!-- 타이핑 애니메이션 -->
-<a href="https://github.com/leesanghyupp">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=22&pause=1000&color=2D6A4F&center=true&vCenter=true&width=500&lines=Backend+Developer+%F0%9F%92%BB;Java+%2F+Spring+Boot+%E2%9A%A1;Always+learning+new+things+%F0%9F%8C�" alt="Typing SVG" />
-</a>
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=22&pause=1000&color=2D6A4F&center=true&vCenter=true&width=500&lines=Backend+Developer;Java+%2F+Spring+Boot;Always+learning+new+things" alt="Typing SVG" />
 
 <br/>
 
@@ -21,22 +19,22 @@
 
 <br/>
 
-## 🙋‍♂️ About Me
+## About Me
 
 ```java
 public class Hyup {
 
     String name     = "이상협 (Lee Sanghyup)";
     String role     = "Backend Developer";
-    String location = "South Korea 🇰🇷";
+    String location = "South Korea";
 
-    String[] loves  = { "Clean Code", "Problem Solving", "Coffee ☕" };
+    String[] loves  = { "Clean Code", "Problem Solving", "Coffee" };
 }
 ```
 
 <br/>
 
-## 🛠 Tech Stack
+## Tech Stack
 
 <div align="center">
 
@@ -53,7 +51,7 @@ public class Hyup {
 
 <br/>
 
-## 📊 GitHub Stats
+## GitHub Stats
 
 <div align="center">
 
@@ -68,11 +66,11 @@ public class Hyup {
 
 <br/>
 
-## 🚀 Projects
+## Projects
 
 | 프로젝트 | 설명 | 기술 |
 |---------|------|------|
-| [88냉삼 통합 관리 시스템](https://github.com/leesanghyupp/88-project) | 프랜차이즈 다중 지점 출퇴근·재고·급여 통합 관리 플랫폼 | Next.js · PostgreSQL · Prisma |
+| [88냉삼 통합 관리 시스템](https://github.com/leesanghyupp/88-project) | 프랜차이즈 다중 지점 출퇴근 · 재고 · 급여 통합 관리 플랫폼 | Next.js · PostgreSQL · Prisma |
 
 <br/>
 
