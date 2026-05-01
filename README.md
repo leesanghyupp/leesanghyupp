@@ -28,12 +28,3 @@
 </div>
 
 ---
-
-### 📊 GitHub Stats
-
-<div align="center">
-
-<img height="160" src="https://github-readme-stats.vercel.app/api?username=leesanghyupp&show_icons=true&theme=default&hide_border=true&count_private=true&hide=stars" />
-<img height="160" src="https://github-readme-stats.vercel.app/api/top-langs/?username=leesanghyupp&layout=compact&theme=default&hide_border=true" />
-
-</div>
