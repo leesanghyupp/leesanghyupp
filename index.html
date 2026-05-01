@@ -110,41 +110,74 @@
     }
     .github-btn:hover { background: #40916c; }
 
-    /* 프로젝트 테이블 */
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 14px;
+    /* 프로젝트 카드 */
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
     }
-    th {
-      background: #d8f3dc;
+    @media (max-width: 600px) {
+      .project-grid { grid-template-columns: 1fr; }
+    }
+    .project-card {
+      background: #fff;
+      border-radius: 12px;
+      border: 1px solid #e2e8f0;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+    .project-card:hover {
+      box-shadow: 0 6px 24px rgba(45,106,79,0.10);
+      transform: translateY(-2px);
+    }
+    .project-card-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .project-badge {
+      font-size: 11px;
+      font-weight: 700;
+      padding: 3px 9px;
+      border-radius: 20px;
+    }
+    .badge-career  { background: #eff6ff; color: #1d4ed8; }
+    .badge-personal { background: #f0fdf4; color: #2d6a4f; }
+    .project-card-title {
+      font-size: 15px;
+      font-weight: 700;
       color: #1b4332;
-      padding: 10px 14px;
-      text-align: left;
-      font-weight: 600;
-    }
-    td {
-      padding: 12px 14px;
-      border-bottom: 1px solid #e9ecef;
-      vertical-align: top;
-    }
-    tr:last-child td { border-bottom: none; }
-    tr:hover td { background: #f0fdf4; }
-    td a {
-      color: #2d6a4f;
-      font-weight: 600;
       text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 6px;
     }
-    td a:hover { text-decoration: underline; }
-
+    .project-card-title:hover { color: #2d6a4f; text-decoration: underline; }
+    .project-card-title svg { flex-shrink: 0; opacity: 0.5; }
+    .project-card-desc {
+      font-size: 13px;
+      color: #4b5563;
+      line-height: 1.6;
+      flex: 1;
+    }
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 4px;
+    }
     .tag {
       display: inline-block;
-      background: #e8f5e9;
+      background: #f0fdf4;
       color: #2d6a4f;
-      border-radius: 4px;
-      padding: 2px 7px;
-      font-size: 12px;
-      margin: 2px 2px 0 0;
+      border: 1px solid #d8f3dc;
+      border-radius: 6px;
+      padding: 2px 8px;
+      font-size: 11px;
+      font-weight: 600;
     }
 
     /* 하단 배너 */
@@ -166,17 +199,6 @@
     <div class="hero">
       <img class="typing-img" src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=22&pause=1000&color=2D6A4F&center=true&vCenter=true&width=500&lines=Backend+Developer;Java+%2F+Spring+Boot;Always+learning+new+things" alt="Typing SVG" />
 
-      <div class="badges">
-        <a href="https://instagram.com/hyup____" target="_blank">
-          <img src="https://img.shields.io/badge/@hyup____-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram" />
-        </a>
-        <a href="https://github.com/leesanghyupp" target="_blank">
-          <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
-        </a>
-        <a href="https://github.com/leesanghyupp" target="_blank">
-          <img src="https://komarev.com/ghpvc/?username=leesanghyupp&style=for-the-badge&color=2d6a4f" alt="Profile Views" />
-        </a>
-      </div>
     </div>
 
     <!-- About Me -->
@@ -190,6 +212,30 @@
         <br/>
         &nbsp;&nbsp;&nbsp;&nbsp;<span class="kw">String</span>[] loves = { <span class="str">"Clean Code"</span>, <span class="str">"Problem Solving"</span>, <span class="str">"Coffee"</span> };<br/>
         }
+      </div>
+    </section>
+
+    <!-- GitHub 링크 -->
+    <section>
+      <h2>GitHub</h2>
+      <div class="github-card">
+        <div class="github-card-left">
+          <img class="github-avatar" src="https://github.com/leesanghyupp.png" alt="avatar" />
+          <div class="github-info">
+            <div class="username">leesanghyupp</div>
+            <div class="desc">Backend Developer · Java / Spring Boot</div>
+          </div>
+        </div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;">
+          <a class="github-btn" href="https://github.com/leesanghyupp" target="_blank">
+            <svg height="16" viewBox="0 0 16 16" fill="white"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+            GitHub 방문하기
+          </a>
+          <a class="github-btn" href="https://instagram.com/hyup____" target="_blank" style="background:#e1306c;">
+            <svg height="16" viewBox="0 0 24 24" fill="white"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            Instagram
+          </a>
+        </div>
       </div>
     </section>
 
@@ -208,90 +254,100 @@
       </div>
     </section>
 
-    <!-- GitHub 링크 -->
-    <section>
-      <h2>GitHub</h2>
-      <div class="github-card">
-        <div class="github-card-left">
-          <img class="github-avatar" src="https://github.com/leesanghyupp.png" alt="avatar" />
-          <div class="github-info">
-            <div class="username">leesanghyupp</div>
-            <div class="desc">Backend Developer · Java / Spring Boot</div>
-          </div>
-        </div>
-        <a class="github-btn" href="https://github.com/leesanghyupp" target="_blank">
-          <svg height="16" viewBox="0 0 16 16" fill="white"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
-          GitHub 방문하기
-        </a>
-      </div>
-    </section>
-
     <!-- Projects -->
     <section>
       <h2>Projects</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>구분</th>
-            <th>프로젝트</th>
-            <th>설명</th>
-            <th>기술</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>자기계발</td>
-            <td><a href="https://github.com/leesanghyupp/88-project" target="_blank">88냉삼 통합 관리 시스템</a></td>
-            <td>프랜차이즈 다중 지점 출퇴근 · 재고 · 급여 통합 관리 플랫폼(바이브 코딩 공부)</td>
-            <td>
-              <span class="tag">Next.js</span>
-              <span class="tag">PostgreSQL</span>
-              <span class="tag">Prisma</span>
-            </td>
-          </tr>
-          <tr>
-            <td>경력</td>
-            <td><a href="https://www.kosapp.co.kr/" target="_blank">KOS 앱 업무지원 플랫폼</a></td>
-            <td>법무사 업무지원 플랫폼(우리은행 연계)</td>
-            <td>
-              <span class="tag">JAVA</span>
-              <span class="tag">MariaDB</span>
-              <span class="tag">SpringBoot</span>
-            </td>
-          </tr>
-          <tr>
-            <td>경력</td>
-            <td><a href="https://www.kosapp.co.kr/" target="_blank">보험 서비스 프레임워크 개발</a></td>
-            <td>요기요 시간제 보험 서비스 프레임워크 구축  및 개발</td>
-            <td>
-              <span class="tag">JAVA</span>
-              <span class="tag">MariaDB</span>
-              <span class="tag">SpringBoot</span>
-            </td>
-          </tr>
-          <tr>
-            <td>경력</td>
-            <td><a href="https://www.kosapp.co.kr/" target="_blank">마이데이터 사업자 개발</a></td>
-            <td>모니2 앱 개발</td>
-            <td>
-              <span class="tag">JAVA</span>
-              <span class="tag">MariaDB</span>
-              <span class="tag">SpringBoot</span>
-            </td>
-          </tr>
-          <tr>
-            <td>경력</td>
-            <td><a href="https://www.kosapp.co.kr/" target="_blank">SI 개발진행</a></td>
-            <td>지방세 유지보수 · 국토부 인허가 시스템 개발 · 삼성자산운용 차세대</td>
-            <td>
-              <span class="tag">JAVA</span>
-              <span class="tag">MariaDB</span>
-              <span class="tag">Oracle</span>
-              <span class="tag">SpringBoot</span>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+      <div class="project-grid">
+
+        <!-- 자기계발 -->
+        <div class="project-card">
+          <div class="project-card-top">
+            <span class="project-badge badge-personal">자기계발</span>
+          </div>
+          <a class="project-card-title" href="https://github.com/leesanghyupp/88-project" target="_blank">
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+            88냉삼 통합 관리 시스템
+          </a>
+          <p class="project-card-desc">프랜차이즈 다중 지점 출퇴근 · 재고 · 급여 통합 관리 플랫폼. 바이브 코딩 학습 목적으로 개발한 풀스택 프로젝트.</p>
+          <div class="project-tags">
+            <span class="tag">Next.js</span>
+            <span class="tag">TypeScript</span>
+            <span class="tag">PostgreSQL</span>
+            <span class="tag">Prisma</span>
+            <span class="tag">Vercel</span>
+          </div>
+        </div>
+
+        <!-- KOS -->
+        <div class="project-card">
+          <div class="project-card-top">
+            <span class="project-badge badge-career">경력</span>
+          </div>
+          <a class="project-card-title" href="https://www.kosapp.co.kr/" target="_blank">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            KOS 앱 업무지원 플랫폼
+          </a>
+          <p class="project-card-desc">법무사 업무지원 플랫폼 개발. 우리은행 연계 금융 서비스 통합 및 업무 프로세스 디지털화.</p>
+          <div class="project-tags">
+            <span class="tag">Java</span>
+            <span class="tag">Spring Boot</span>
+            <span class="tag">MariaDB</span>
+          </div>
+        </div>
+
+        <!-- 요기요 보험 -->
+        <div class="project-card">
+          <div class="project-card-top">
+            <span class="project-badge badge-career">경력</span>
+          </div>
+          <a class="project-card-title" target="_blank">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            보험 서비스 프레임워크 개발
+          </a>
+          <p class="project-card-desc">요기요 시간제 보험 서비스 프레임워크 구축 및 개발. 라이더 대상 시간 단위 보험 연동 시스템 설계.</p>
+          <div class="project-tags">
+            <span class="tag">Java</span>
+            <span class="tag">Spring Boot</span>
+            <span class="tag">MariaDB</span>
+          </div>
+        </div>
+
+        <!-- 마이데이터 -->
+        <div class="project-card">
+          <div class="project-card-top">
+            <span class="project-badge badge-career">경력</span>
+          </div>
+          <a class="project-card-title" href="https://www.moneey.co.kr/" target="_blank">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            마이데이터 사업자 개발
+          </a>
+          <p class="project-card-desc">모니2 앱 마이데이터 서비스 개발. 금융 데이터 통합 조회 및 개인 자산 관리 기능 구현.</p>
+          <div class="project-tags">
+            <span class="tag">Java</span>
+            <span class="tag">Spring Boot</span>
+            <span class="tag">MariaDB</span>
+          </div>
+        </div>
+
+        <!-- SI -->
+        <div class="project-card">
+          <div class="project-card-top">
+            <span class="project-badge badge-career">경력</span>
+          </div>
+          <span class="project-card-title">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            SI 개발
+          </span>
+          <p class="project-card-desc">지방세 유지보수 · 국토부 인허가 시스템 개발 · 삼성자산운용 차세대 시스템 구축 등 다수의 공공·금융 SI 프로젝트 수행.</p>
+          <div class="project-tags">
+            <span class="tag">Java</span>
+            <span class="tag">Spring Boot</span>
+            <span class="tag">Oracle</span>
+            <span class="tag">MariaDB</span>
+          </div>
+        </div>
+
+      </div>
     </section>
 
   </div>
