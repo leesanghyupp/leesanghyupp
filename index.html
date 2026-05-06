@@ -9,8 +9,8 @@
 
     body {
       font-family: 'Segoe UI', sans-serif;
-      background: #f6f8fa;
-      color: #1b4332;
+      background: #0a0a0a;
+      color: #e5e5e5;
     }
 
     /* 상단 배너 */
@@ -45,17 +45,18 @@
     h2 {
       font-size: 20px;
       font-weight: 700;
-      color: #2d6a4f;
-      border-bottom: 2px solid #d8f3dc;
+      color: #ffffff;
+      border-bottom: 2px solid #333;
       padding-bottom: 8px;
       margin-bottom: 20px;
     }
 
     /* About Me 코드블록 */
     .code-block {
-      background: #0d1117;
+      background: #161616;
       color: #c9d1d9;
       border-radius: 12px;
+      border: 1px solid #2a2a2a;
       padding: 24px 28px;
       font-family: 'Fira Code', 'Courier New', monospace;
       font-size: 14px;
@@ -72,7 +73,7 @@
     .skills h3 {
       font-size: 14px;
       font-weight: 600;
-      color: #40916c;
+      color: #a0a0a0;
       margin: 20px 0 10px;
     }
     .skills img { max-width: 100%; }
@@ -82,7 +83,8 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      background: #0d1117;
+      background: #161616;
+      border: 1px solid #2a2a2a;
       border-radius: 12px;
       padding: 24px 28px;
       gap: 16px;
@@ -92,23 +94,24 @@
     .github-avatar {
       width: 64px; height: 64px;
       border-radius: 50%;
-      border: 3px solid #2d6a4f;
+      border: 3px solid #404040;
     }
     .github-info .username {
-      font-size: 20px; font-weight: 700; color: #c9d1d9;
+      font-size: 20px; font-weight: 700; color: #ffffff;
     }
     .github-info .desc {
       font-size: 13px; color: #8b949e; margin-top: 4px;
     }
     .github-btn {
       display: inline-flex; align-items: center; gap: 8px;
-      background: #2d6a4f; color: #fff;
+      background: #ffffff; color: #0a0a0a;
       padding: 10px 20px; border-radius: 8px;
       text-decoration: none; font-weight: 600; font-size: 14px;
-      transition: background 0.2s;
+      transition: background 0.2s, transform 0.2s;
       white-space: nowrap;
     }
-    .github-btn:hover { background: #40916c; }
+    .github-btn:hover { background: #e0e0e0; transform: translateY(-1px); }
+    .github-btn svg { fill: #0a0a0a; }
 
     /* 프로젝트 카드 */
     .project-grid {
@@ -120,17 +123,17 @@
       .project-grid { grid-template-columns: 1fr; }
     }
     .project-card {
-      background: #fff;
+      background: #161616;
       border-radius: 12px;
-      border: 1px solid #e2e8f0;
+      border: 1px solid #2a2a2a;
       padding: 20px;
       display: flex;
       flex-direction: column;
       gap: 10px;
-      transition: box-shadow 0.2s, transform 0.2s;
+      transition: border-color 0.2s, transform 0.2s;
     }
     .project-card:hover {
-      box-shadow: 0 6px 24px rgba(45,106,79,0.10);
+      border-color: #404040;
       transform: translateY(-2px);
     }
     .project-card-top {
@@ -144,22 +147,22 @@
       padding: 3px 9px;
       border-radius: 20px;
     }
-    .badge-career  { background: #eff6ff; color: #1d4ed8; }
-    .badge-personal { background: #f0fdf4; color: #2d6a4f; }
+    .badge-career  { background: #1e3a5f; color: #60a5fa; }
+    .badge-personal { background: #1a2e1a; color: #6ee7b7; }
     .project-card-title {
       font-size: 15px;
       font-weight: 700;
-      color: #1b4332;
+      color: #ffffff;
       text-decoration: none;
       display: flex;
       align-items: center;
       gap: 6px;
     }
-    .project-card-title:hover { color: #2d6a4f; text-decoration: underline; }
+    .project-card-title:hover { color: #a0a0a0; text-decoration: underline; }
     .project-card-title svg { flex-shrink: 0; opacity: 0.5; }
     .project-card-desc {
       font-size: 13px;
-      color: #4b5563;
+      color: #a0a0a0;
       line-height: 1.6;
       flex: 1;
     }
@@ -171,9 +174,9 @@
     }
     .tag {
       display: inline-block;
-      background: #f0fdf4;
-      color: #2d6a4f;
-      border: 1px solid #d8f3dc;
+      background: #252525;
+      color: #d4d4d4;
+      border: 1px solid #333;
       border-radius: 6px;
       padding: 2px 8px;
       font-size: 11px;
@@ -191,13 +194,13 @@
 <body>
 
   <!-- 상단 배너 -->
-  <img class="banner" src="https://capsule-render.vercel.app/api?type=waving&color=2d6a4f&height=200&section=header&text=Hi%2C%20I'm%20Hyup%20%F0%9F%91%8B&fontSize=48&fontColor=ffffff&fontAlignY=38&desc=Backend%20Developer&descSize=20&descAlignY=58&descColor=d8f3dc" alt="banner" />
+  <img class="banner" src="https://capsule-render.vercel.app/api?type=waving&color=0:1a1a1a,100:2a2a2a&height=200&section=header&text=Hi%2C%20I'm%20Hyup%20%F0%9F%91%8B&fontSize=48&fontColor=ffffff&fontAlignY=38&desc=Backend%20Developer&descSize=20&descAlignY=58&descColor=a0a0a0" alt="banner" />
 
   <div class="container">
 
     <!-- 히어로 -->
     <div class="hero">
-      <img class="typing-img" src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=22&pause=1000&color=2D6A4F&center=true&vCenter=true&width=500&lines=Backend+Developer;Java+%2F+Spring+Boot;Always+learning+new+things" alt="Typing SVG" />
+      <img class="typing-img" src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=22&pause=1000&color=FFFFFF&center=true&vCenter=true&width=500&lines=Backend+Developer;Java+%2F+Spring+Boot;Always+learning+new+things" alt="Typing SVG" />
 
     </div>
 
@@ -228,11 +231,11 @@
         </div>
         <div style="display:flex;gap:10px;flex-wrap:wrap;">
           <a class="github-btn" href="https://github.com/leesanghyupp" target="_blank">
-            <svg height="16" viewBox="0 0 16 16" fill="white"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
-            GitHub 방문하기
+            <svg height="16" viewBox="0 0 16 16" fill="#0a0a0a"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+            GitHub
           </a>
-          <a class="github-btn" href="https://instagram.com/hyup____" target="_blank" style="background:#e1306c;">
-            <svg height="16" viewBox="0 0 24 24" fill="white"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          <a class="github-btn" href="https://instagram.com/hyup____" target="_blank" style="background:#333; color:#fff;">
+            <svg height="16" viewBox="0 0 24 24" fill="#fff"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
             Instagram
           </a>
         </div>
@@ -244,13 +247,13 @@
       <h2>Tech Stack</h2>
       <div class="skills">
         <h3>Languages & Frameworks</h3>
-        <img src="https://skillicons.dev/icons?i=java,spring,mysql,postgres&theme=light" alt="Languages" />
+        <img src="https://skillicons.dev/icons?i=java,spring,mysql,postgres&theme=dark" alt="Languages" />
 
         <h3>Tools & Infra</h3>
-        <img src="https://skillicons.dev/icons?i=git,github,docker,linux,vscode,idea&theme=light" alt="Tools" />
+        <img src="https://skillicons.dev/icons?i=git,github,docker,linux,vscode,idea&theme=dark" alt="Tools" />
 
         <h3>Also using</h3>
-        <img src="https://skillicons.dev/icons?i=nextjs,ts,tailwind&theme=light" alt="Also using" />
+        <img src="https://skillicons.dev/icons?i=nextjs,ts,tailwind&theme=dark" alt="Also using" />
       </div>
     </section>
 
@@ -274,6 +277,44 @@
             <span class="tag">TypeScript</span>
             <span class="tag">PostgreSQL</span>
             <span class="tag">Prisma</span>
+            <span class="tag">Vercel</span>
+          </div>
+        </div>
+
+        <!-- 자기계발 - 학교이음 -->
+        <div class="project-card">
+          <div class="project-card-top">
+            <span class="project-badge badge-personal">자기계발</span>
+          </div>
+          <a class="project-card-title" href="https://github.com/leesanghyupp/school-ieum" target="_blank">
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+            학교이음 (Schoolieum)
+          </a>
+          <p class="project-card-desc">학교와 가정을 잇는 디지털 가정통신문 + 수업 관리 플랫폼. 시각장애인 접근성을 고려한 SaaS B2B 모델.</p>
+          <div class="project-tags">
+            <span class="tag">Spring Boot</span>
+            <span class="tag">React</span>
+            <span class="tag">TypeScript</span>
+            <span class="tag">PostgreSQL</span>
+            <span class="tag">Redis</span>
+          </div>
+        </div>
+
+        <!-- 자기계발 - 빅이음 -->
+        <div class="project-card">
+          <div class="project-card-top">
+            <span class="project-badge badge-personal">자기계발</span>
+          </div>
+          <a class="project-card-title" href="https://github.com/leesanghyupp/big-eum" target="_blank">
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+            빅이음 (BIG-EUM)
+          </a>
+          <p class="project-card-desc">이음금융서비스 BIG사업단 공식 홈페이지. 설계사 리크루팅 및 사업단 브랜딩/홍보용 웹사이트.</p>
+          <div class="project-tags">
+            <span class="tag">Next.js</span>
+            <span class="tag">TypeScript</span>
+            <span class="tag">Tailwind CSS</span>
+            <span class="tag">Supabase</span>
             <span class="tag">Vercel</span>
           </div>
         </div>
@@ -353,7 +394,7 @@
   </div>
 
   <!-- 하단 배너 -->
-  <img class="footer-banner" src="https://capsule-render.vercel.app/api?type=waving&color=2d6a4f&height=120&section=footer" alt="footer" />
+  <img class="footer-banner" src="https://capsule-render.vercel.app/api?type=waving&color=0:2a2a2a,100:1a1a1a&height=120&section=footer" alt="footer" />
 
 </body>
 </html>
